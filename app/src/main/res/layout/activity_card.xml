@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CardActivity">
+
+    <ImageView
+        android:id="@+id/cover"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="10sp"
+        android:layout_marginLeft="10sp"
+        android:layout_width="160sp"
+        android:layout_height="200sp"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/cover"
+        app:layout_constraintTop_toBottomOf="@+id/cover"
+        android:layout_marginTop="20sp"
+        android:text="Title"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/cover"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:layout_marginTop="20sp"
+        android:text="Автор:"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/author_name"
+        android:layout_width="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/author"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="10sp"
+        android:text="name"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/cover"
+        app:layout_constraintTop_toBottomOf="@+id/author"
+        android:layout_marginTop="20sp"
+        android:text="Оценка:"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/score_value"
+        android:layout_width="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/score"
+        app:layout_constraintTop_toBottomOf="@+id/author"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="10sp"
+        android:text="value"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/cover"
+        app:layout_constraintTop_toBottomOf="@+id/score"
+        android:layout_marginTop="20sp"
+        android:text="Something..."
+        android:layout_height="wrap_content"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

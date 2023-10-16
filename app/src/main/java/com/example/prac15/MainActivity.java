@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                     recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
                     recyclerView.setHasFixedSize(true);
                     ArrayList<Anime> list = response.body();
-                    ItemAdapter adapter = new ItemAdapter(getApplicationContext(), list);
+                    ItemAdapter adapter = new ItemAdapter(MainActivity.this, list);
                     recyclerView.setAdapter(adapter);
                 }
             }

@@ -1,6 +1,8 @@
 package com.example.prac15;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +23,7 @@ private ArrayList<Anime> List;
 
     public ItemAdapter(Context context, ArrayList<Anime> list) {
         this.context = context;
-        List = list;
+        this.List = list;
     }
 
 
@@ -40,6 +42,15 @@ private ArrayList<Anime> List;
         Anime anime = List.get(position);
         holder.tv.setText(anime.getName());
         Picasso.with(context).load(anime.getImg()).into(holder.iv);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(context, CardActivity.class);
+                intent.putExtra("id", anime.getId());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
