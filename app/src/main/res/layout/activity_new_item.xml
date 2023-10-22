@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewItemActivity">
+
+    <EditText
+        android:id="@+id/edit_name"
+        android:hint="Наименование"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16sp"
+        android:layout_marginHorizontal="8sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/edit_link"
+        android:hint="Ссылка на картинку"
+        app:layout_constraintTop_toBottomOf="@id/edit_name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16sp"
+        android:layout_marginHorizontal="8sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/edit_description"
+        android:hint="Описание"
+        app:layout_constraintTop_toBottomOf="@id/edit_link"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16sp"
+        android:layout_marginHorizontal="8sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/edit_fio"
+        android:hint="ФИО студента"
+        app:layout_constraintTop_toBottomOf="@id/edit_description"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16sp"
+        android:layout_marginHorizontal="8sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/edit_score"
+        android:hint="Оценка"
+        app:layout_constraintTop_toBottomOf="@id/edit_fio"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16sp"
+        android:layout_marginHorizontal="8sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:text="Добавить"
+        android:id="@+id/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/purple_700"
+        android:layout_marginBottom="30sp"
+        android:layout_width="200sp"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,7 @@ package com.example.prac15;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -47,8 +49,17 @@ private ArrayList<Anime> List;
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(context, CardActivity.class);
-                intent.putExtra("id", anime.getId());
-                context.startActivity(intent);
+                //Log.d("getid", String.valueOf(anime.getId()));
+                if (!String.valueOf(anime.getId()).equals("0")) {
+                    Log.d("value", String.valueOf(anime.getId()));
+                    intent.putExtra("id", anime.getId());
+                    context.startActivity(intent);
+                } else {
+                    Log.d("value", "1");
+                    String s = new Gson().toJson(anime);
+                    intent.putExtra("item", s);
+                    context.startActivity(intent);
+                }
             }
         });
     }
